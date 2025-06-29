@@ -9,8 +9,8 @@ import java_cup.runtime.Symbol;
 
 public class MainFlexCup {
 
-    private static final String INPUT_FILE = "resources/ejemplo2.txt";
-    private static final String ERROR_FILE = "output/errors.log";
+    private static final String INPUT_FILE = "src/resources/ejemplo2.txt";
+    private static final String ERROR_FILE = "src/output/errors.log";
     private static String basePath = System.getProperty("user.dir");
     private static final String path = Paths.get(basePath, INPUT_FILE).toString();
 
