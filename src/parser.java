@@ -4,7 +4,6 @@
 //----------------------------------------------------
 
 import java_cup.runtime.*;
-import src.ErrorHandler;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;

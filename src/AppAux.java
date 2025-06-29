@@ -7,10 +7,11 @@ public class AppAux {
     private static final String OUTPUT_FILE = "src/output/output.txt";
     private static MainFlexCup mfjc = new MainFlexCup();
 
-
+    /**
     public static void generarLexerParser() throws Exception {
         mfjc.GenerarLexerParser();
     }
+    */
 
     //Funcion puente que llama a la funcion que hace el analisis lexico en el archivo
     public static void ejecutarLexer() throws Exception {
