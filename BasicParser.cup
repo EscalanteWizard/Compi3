@@ -1,6 +1,6 @@
-package org.example.ParserLexer;
+
 import java_cup.runtime.*;
-import org.example.ErrorHandler;
+import src.ErrorHandler;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Map;
@@ -343,7 +343,7 @@ parser code {:
     public void guardarCodigoIntermedio() {
         try {
             // Ruta relativa desde donde se ejecuta el parser
-            String ruta = "src/main/java/org/example/ParserLexer/resources";
+            String ruta = "src/output";
             java.io.File dir = new java.io.File(ruta);
             if (!dir.exists()) dir.mkdirs();
             java.io.File file = new java.io.File(dir, "codigo3D");

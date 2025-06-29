@@ -1,4 +1,4 @@
-package org.example;
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -121,12 +121,12 @@ public class MainFlexCup {
         iniLexerParser(fullPathLexer, fullPathParser);
         
         // 2. Mover archivos generados
-        Path destDir = Paths.get(basePath, "Proy1Comp","app", "src", "main", "java", "org", "example", "ParserLexer");
+        Path destDir = Paths.get(basePath, "src");
         Files.createDirectories(destDir);
         
         Files.move(Paths.get(basePath, "sym.java"), destDir.resolve("sym.java"), StandardCopyOption.REPLACE_EXISTING);
         Files.move(Paths.get(basePath, "parser.java"), destDir.resolve("parser.java"), StandardCopyOption.REPLACE_EXISTING);
-        Files.move(Paths.get(basePath, "Proy1Comp","app", "src", "Adicionales", "BasicLexerCup.java"), 
+        Files.move(Paths.get(basePath, "src", "BasicLexerCup.java"), 
                  destDir.resolve("BasicLexerCup.java"), StandardCopyOption.REPLACE_EXISTING);
     }
 }

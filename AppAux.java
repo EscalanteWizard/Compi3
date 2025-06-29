@@ -1,4 +1,4 @@
-package org.example;
+
 import java.nio.file.*;
 
 public class AppAux {
@@ -25,7 +25,7 @@ public class AppAux {
 
     //Funcion puente que llama a la funcion que hace el analisis sintactico en el archivo
     public static void ejecutarLexerParser() throws Exception {
-        mfjc.AnalizadorLexicoSintactico();
+        MainFlexCup.AnalizadorLexicoSintactico();
 
         // 4. Escribir resultados
         FileManager.writeFile(OUTPUT_FILE, "Análisis completado correctamente");

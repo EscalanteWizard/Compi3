@@ -1,12 +1,10 @@
 
-package org.example.ParserLexer;
-
 import java_cup.runtime.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import org.example.ErrorHandler;
+import ErrorHandler;
 
 %%
 %public
@@ -26,7 +24,7 @@ import org.example.ErrorHandler;
     // Salida: Archivo "tokens.log"
     private void initTokenLogger() {
         try {
-            tokenWriter = new FileWriter("Proy1Comp/app/src/main/resources/tokens.log");
+            tokenWriter = new FileWriter("output/tokens.log");
             tokenWriter.write("=== TOKENS ENCONTRADOS ===\n");
             tokenWriter.write(String.format("%-20s %-20s %-10s %-10s\n", 
                                 "TOKEN", "LEXEMA", "LINEA", "COLUMNA"));
