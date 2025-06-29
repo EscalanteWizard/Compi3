@@ -16,8 +16,8 @@ import jflex.exceptions.SilentExit;
 
 public class MainFlexCup {
 
-    private static final String INPUT_FILE = "Proy1Comp/app/src/main/resources/ejemplo2.txt";
-    private static final String ERROR_FILE = "Proy1Comp/app/src/main/resources/errors.log";
+    private static final String INPUT_FILE = "src/resources/ejemplo2.txt";
+    private static final String ERROR_FILE = "src/output/errors.log";
     private static String basePath = System.getProperty("user.dir");
     private static final String path = Paths.get(basePath, INPUT_FILE).toString();
 
@@ -116,8 +116,8 @@ public class MainFlexCup {
         String basePath = System.getProperty("user.dir");
         //System.out.println("Directorio base: " + basePath);
         
-        String fullPathLexer = Paths.get(basePath, "Proy1Comp","app", "src", "Adicionales", "BasicLexerCup.jflex").toString();
-        String fullPathParser = Paths.get(basePath, "Proy1Comp","app", "src", "Adicionales", "BasicParser.cup").toString();
+        String fullPathLexer = Paths.get(basePath, "src", "libs", "BasicLexerCup.jflex").toString();
+        String fullPathParser = Paths.get(basePath, "src", "libs", "BasicParser.cup").toString();
         iniLexerParser(fullPathLexer, fullPathParser);
         
         // 2. Mover archivos generados

@@ -3,8 +3,8 @@ import java.nio.file.*;
 
 public class AppAux {
     // Globales - Rutas constantes
-    private static final String INPUT_FILE = "Proy1Comp/app/src/main/resources/ejemplo2.txt";
-    private static final String OUTPUT_FILE = "Proy1Comp/app/src/main/resources/output.txt";
+    private static final String INPUT_FILE = "src/resources/ejemplo2.txt";
+    private static final String OUTPUT_FILE = "src/output/output.txt";
     private static MainFlexCup mfjc = new MainFlexCup();
 
 

@@ -7,7 +7,7 @@ import org.example.AppAux;
 public class App {
 
     private static AppAux app = new AppAux();
-    private static final String ERROR_FILE = "Proy1Comp/app/src/main/resources/errors.log";
+    private static final String ERROR_FILE = "src/output/errors.log";
 
     public String getGreeting() {
         return "Hello World!";
