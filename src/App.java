@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 // import AppAux; // Si es necesario, pero solo si AppAux.java está en src/ y sin paquete
 
