@@ -1,8 +1,5 @@
-
 import java.io.IOException;
-
-//RuntimeException Linea 942
-import src.AppAux;
+// import AppAux; // Si es necesario, pero solo si AppAux.java está en src/ y sin paquete
 
 public class App {
 
@@ -14,15 +11,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        
         try {
-            /* Genera los archivos de la carpeta ParserLexer */
-            app.generarLexerParser();
-
-            /* Hace solo LEXER */
+            // Aquí solo ejecuta el análisis, NO generes analizadores aquí
             app.ejecutarLexer();
-
-            /* Hace LEXER Y PARSER */
             app.ejecutarLexerParser();
             System.out.println("Proceso completado exitosamente");
         } catch (Exception e) {
@@ -35,5 +26,4 @@ public class App {
             e.printStackTrace();
         }
     }
-
 }
