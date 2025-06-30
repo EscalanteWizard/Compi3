@@ -665,13 +665,19 @@ private void manejarAsignacionSimple(String instruction, String[] data) {
 
 /**
  * Verifica si es un literal de carácter o entero
+ * @param valor el valor a verificar
+ * @return true si es un literal de carácter (entre comillas simples) o un entero
  */
 private boolean esLiteralCaracterOEntero(String valor) {
+    // Verifica si el valor es un literal de carácter (entre comillas simples) o un entero
+    // También verifica si es un entero válido
     return valor.startsWith("'") || verifTipoEntero(valor);
 }
 
 /**
  * Maneja operación de incremento
+ * Esta función se encarga de manejar el incremento de una variable.
+ * Carga el valor de la variable en un registro temporal, incrementa su valor
  */
 private void manejarIncremento(String[] data) {
     String variable = data[2].substring(2);
@@ -683,29 +689,55 @@ private void manejarIncremento(String[] data) {
 
 /**
  * Maneja asignación de literal
+ * Esta función se encarga de manejar la asignación de un valor literal a un registro temporal.
+ * Si es la primera asignación de un literal, se inicia la sección de datos.
  */
 private void manejarAsignacionLiteral(String[] data) {
+    if (numTemporalesReg == 0) {
+        code.append(".data\n");
+    }
     code.append("li $t" + numTemporalesReg + ", " + data[2] + "\n");
     numTemporalesReg++;
 }
 
 /**
  * Maneja asignación de flotante
+ * Esta función se encarga de manejar la asignación de un valor flotante a un registro flotante.
+ * Si es la primera asignación de flotante, se inicia la sección de datos.
  */
 private void manejarAsignacionFlotante(String[] data) {
+    if (numFlotantesAux == 0) {
+        code.append(".data\n");
+    }
     code.append("li.s $f" + numFlotantesAux + ", " + data[2] + "\n");
     numFlotantesAux++;
 }
 
 /**
  * Maneja asignación temporal
+ * Esta función se encarga de manejar la asignación de un valor temporal a un registro temporal.
+ * Si el registro temporal ya tiene un valor asignado, se mueve ese valor al nuevo registro temporal.
+ * Si no, se carga el valor de la variable en el registro temporal.
  */
 private void manejarAsignacionTemporal(String[] data) {
+    // Verifica si el registro temporal ya tiene un valor asignado
+    if (valoresTemporales.containsKey(data[2])) {
+        String registroTemporal = valoresTemporales.get(data[2]);
+        code.append("move $t" + numTemporalesReg + ", " + registroTemporal + "\n");
+    } else {
+        // Si no, carga el valor de la variable en el registro temporal
+        manejarCargaVariable(data);
+    }
     code.append("sb $t" + numTemporalesReg + ", " + data[2] + "\n");
 }
 
 /**
  * Maneja carga de variable
+ * Esta función se encarga de cargar el valor de una variable en un registro temporal.
+ * Si el tipo de dato no está definido, se asigna un tipo por defecto (int).
+ * @param data un arreglo de cadenas que contiene la información de la variable
+ * @return void
+ * @throws IOException si ocurre un error al escribir en el archivo
  */
 private void manejarCargaVariable(String[] data) {
     String tipoDato = dataSectionStrings.get(data[2]);
@@ -811,6 +843,11 @@ private void manejarComparacionIgual() {
 
 /**
  * Maneja comparación distinto
+ * Esta instrucción verifica si dos valores son diferentes
+ * y almacena el resultado en un registro temporal.
+ * @param none
+ * @return void
+ * sne = set not equal
  */
 private void manejarComparacionDistinto() {
     code.append("sne $t" + numTemporalesReg + ", $t" + (numTemporalesReg - 2) + ", $t" + (numTemporalesReg - 1) + "\n");
