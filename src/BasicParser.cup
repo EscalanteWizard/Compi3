@@ -344,7 +344,7 @@ parser code {:
             String ruta = "src/output";
             java.io.File dir = new java.io.File(ruta);
             if (!dir.exists()) dir.mkdirs();
-            java.io.File file = new java.io.File(dir, "codigo3D");
+            java.io.File file = new java.io.File(dir, "codigo3D.txt");
             java.io.PrintWriter writer = new java.io.PrintWriter(file, "UTF-8");
             for (String linea : codigoIntermedio) {
                 writer.println(linea);

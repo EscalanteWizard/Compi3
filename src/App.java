@@ -13,10 +13,18 @@ public class App {
 
     public static void main(String[] args) {
         try {
-            // Aquí solo ejecuta el análisis, NO generes analizadores aquí
+            // Verificar si el archivo de errores existe y eliminarlo si es necesario
             app.ejecutarLexer();
+
+            // Ejecutar el análisis léxico y sintáctico
             app.ejecutarLexerParser();
             System.out.println("Proceso completado exitosamente");
+
+            // --- Generar código MIPS ---
+            MIPSGenerator mipsGen = new MIPSGenerator();
+            mipsGen.generateMips();
+            System.out.println("Código MIPS generado en src/output/mipsCode.asm");
+            
         } catch (Exception e) {
             try {
                 FileManager.writeFile(ERROR_FILE, "Error: " + e.getMessage());

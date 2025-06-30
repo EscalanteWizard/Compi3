@@ -431,7 +431,7 @@ public class BasicLexerCup implements java_cup.runtime.Scanner {
     // Salida: Archivo "tokens.log"
     private void initTokenLogger() {
         try {
-            tokenWriter = new FileWriter("output/tokens.log");
+            tokenWriter = new FileWriter("src/output/tokens.log");
             tokenWriter.write("=== TOKENS ENCONTRADOS ===\n");
             tokenWriter.write(String.format("%-20s %-20s %-10s %-10s\n", 
                                 "TOKEN", "LEXEMA", "LINEA", "COLUMNA"));

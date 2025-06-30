@@ -1,0 +1,158 @@
+t1 = 2;
+declaracion_global_1: y = t1:
+t2 = hola;
+declaracion_global_2: msg = t2:
+declaracion_global_3: x = sin_inicializar:
+INICIO_main: 
+t3 = 5;
+declaracion_array_4: array = new int[t3]:
+t4 = 67;
+t5 = t4 + error;
+declaracion_array_5: array = new int[expr_arit]:
+declaracion_6: b1 = sin_inicializar;
+t6 = ss;
+declaracion_7: s1 = t6;
+leer_8: leer s1;
+t7 = b1;
+llamada_1: t8 = call print([t7]);
+t9 = true;
+llamada_2: t10 = call print([t9]);
+t11 = 67;
+llamada_3: t12 = call print([opUnario]);
+t13 = 2;
+t14 = array[t13];
+t15 = array;
+asig_9: x = t15;
+t16 = hola;
+declaracion_10: nombre = t16;
+t17 = 2;
+declaracion_11: numero = t17;
+t18 = 4;
+asig_12: x = t18;
+INICIO_do_while_1:
+t19 = 1;
+t20 = error - t19;
+asig_13: var = expr_arit;
+t21 = 122;
+t22 = error > t21;
+t23 = 12;
+t24 = 34;
+t25 = 35;
+t26 = t24 + t25;
+t27 = t23 > expr_arit;
+t28 = expr_rel && expr_rel;
+t29 = 37;
+t30 = t29 ^ error;
+t31 = 456;
+t32 = 76;
+t33 = t31 % t32;
+t34 = expr_arit + mod;
+declaracion_14: fl2 = expr_arit;
+t35 = 10;
+t36 = 67;
+t37 = arr[t36];
+t38 = arr;
+t39 = true;
+t40 = hola mundo;
+t41 = 45;
+t42 = null;
+llamada_4: t43 = call func1([error, t39, t40, t41, t42]);
+t44 = t38 * t43;
+t45 = t35 - mult;
+asig_15: arr = expr_arit;
+INICIO_do_while_2:
+t46 = 6;
+declaracion_16: juan = t46;
+t47 = x;
+t48 = 10;
+t49 = t47 != t48;
+CONDICION_do_while_ (t49) goto INICIO_do_while_2;
+FIN_do_while_do_while_2:
+t50 = 0;
+t51 = error == t50;
+INICIO_if_1: if (t51) goto if_1_true;
+t52 = entra al if;
+llamada_5: t53 = call print([t52]);
+Fin_if_1:
+t54 = true;
+INICIO_if_2: if (t51) goto if_2_true;
+llamada_6: t55 = call print([error]);
+INICIO_else_3:
+llamada_7: t56 = call print([error]);
+FIN_else_else_3:
+Fin_if_2:
+t57 = x;
+t58 = 10;
+t59 = t57 < t58;
+INICIO_if_4: if (t59) goto if_4_true;
+t60 = 2;
+declaracion_17: juan = t60;
+t61 = 10;
+t62 = error == t61;
+INICIO_elif_5: if (t62) goto elif_5_true;
+t63 = 6;
+declaracion_18: juan = t63;
+FIN_elif_elif_5:
+INICIO_else_6:
+t64 = x;
+return_1: return t64;
+FIN_else_else_6:
+Fin_if_4:
+t65 = x;
+INICIO_switch_1: switch (t65):
+t66 = 1;
+t67 = 2;
+asig_19: y = t67;
+INIT_CASE_case_1: if (t65 == t66) goto case_1_true;
+FIN_CASE_case_1:
+t68 = 2;
+t69 = 2;
+asig_20: y = t69;
+INIT_CASE_case_2: if (t65 == t68) goto case_2_true;
+FIN_CASE_case_2:
+t70 = 3;
+asig_21: y = t70;
+FIN_switch_switch_1:
+INICIO_do_while_3:
+t71 = 6;
+declaracion_22: juan = t71;
+t72 = x;
+t73 = 10;
+t74 = t72 != t73;
+CONDICION_do_while_ (t74) goto INICIO_do_while_3;
+FIN_do_while_do_while_3:
+t75 = 0;
+declaracion_23: i = t75;
+t76 = i;
+t77 = 10;
+t78 = t76 < t77;
+t79 = i;
+t80 = 1;
+t81 = t79 + t80;
+asig_24: i = expr_arit;
+INICIO_for_1: if (t78) goto for_1_true;
+t82 = hola;
+declaracion_25: msg = t82;
+INCREMENTO_for_ (t81)
+FIN_main: 
+INICIO_funcion_2: int f1()
+t83 = hola;
+asig_26: num1 = t83;
+t84 = num1;
+return_3: return t84;
+FIN_funcion_2: f1:
+INICIO_funcion_4: int f1()
+t85 = hola;
+asig_27: num1 = t85;
+t86 = num1;
+return_5: return t86;
+FIN_funcion_4: f1:
+INICIO_funcion_6: string f2()
+t87 = true;
+t88 = num2;
+llamada_8: t89 = call f1([t87, t88]);
+t90 = 2;
+asig_28: num1 = t90;
+t91 = num2;
+return_7: return t91;
+FIN_funcion_6: f2:
